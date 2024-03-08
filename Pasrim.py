@@ -13,5 +13,5 @@ def pars():
     for data in block: # проходим циклом по содержимому контейнера
         description['Name'].append(data.find('div', class_='product-title__head').text.replace("\n", ""))
         description['Writer'].append(data.find('div', class_='product-title__author').text.replace("\n", ""))
-        description['Price'].append(data.find('div', class_='product-price__value product-price__value--discount').text.replace("\n", ""))
+        description['Price'].append(data.find('div', class_='product-price__value product-price__value--discount').text)
     return description
